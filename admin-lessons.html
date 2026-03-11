@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление уроками</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Управление уроками</h1>
+            <div>
+                <button id="theme-toggle">Сменить тему</button>
+                <a href="admin-dashboard.html">Назад к панели</a>
+            </div>
+        </header>
+        <main>
+            <h2>Создать урок</h2>
+            <form id="create-lesson-form">
+                <input type="text" id="lesson-title" placeholder="Название урока" required>
+                <input type="text" id="lesson-video" placeholder="Ссылка с YouTube или путь к файлу" required>
+                <input type="text" id="lesson-category" placeholder="Категория (например, Математика)">
+                <input type="number" id="lesson-duration" placeholder="Время на тест (мин)" required>
+                <button type="submit">Создать урок</button>
+            </form>
+
+            <h2>Добавить вопрос к уроку</h2>
+            <form id="add-question-form">
+                <select id="lesson-select" required></select>
+                <input type="text" id="question-text" placeholder="Текст вопроса" required>
+                <input type="text" id="optionA" placeholder="Вариант A" required>
+                <input type="text" id="optionB" placeholder="Вариант B" required>
+                <input type="text" id="optionC" placeholder="Вариант C" required>
+                <input type="text" id="optionD" placeholder="Вариант D" required>
+                <select id="correctAnswer" required>
+                    <option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option>
+                </select>
+                <button type="submit">Добавить вопрос</button>
+            </form>
+
+            <!-- Область для отображения вопросов выбранного урока -->
+            <div id="questions-list-admin" style="margin-bottom: 20px;"></div>
+
+            <h2>Список уроков</h2>
+            <div id="lessons-list-admin"></div>
+        </main>
+    </div>
+    <script src="js/database.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

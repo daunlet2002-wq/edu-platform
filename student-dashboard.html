@@ -1,0 +1,29 @@
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель ученика</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Доступные уроки</h1>
+            <div>
+                <a href="student-profile.html">Профиль</a>
+                <a href="bookmarks.html">Закладки</a>
+                <a href="history.html">История</a>
+                <button id="logout-button">Выйти</button>
+            </div>
+        </header>
+        <div id="notifications-container"></div>
+        <div class="controls-container">
+            <input type="text" id="search-input" placeholder="Поиск уроков по названию...">
+        </div>
+        <div id="progress-bar-container"></div>
+        <main id="lessons-list" class="lessons-grid"></main>
+    </div>
+    <script src="js/student.js"></script>
+</body>
+</html>

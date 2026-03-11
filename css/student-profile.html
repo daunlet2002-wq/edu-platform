@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль ученика</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Личный кабинет</h1>
+            <div>
+                <button id="theme-toggle">Сменить тему</button>
+                <a href="student-dashboard.html">На главную</a>
+            </div>
+        </header>
+        <main>
+            <div class="profile-card">
+                <h2><span id="profile-name"></span></h2>
+                <p>Логин: <span id="profile-login"></span></p>
+                <p>Пройдено тестов: <span id="stats-tests"></span></p>
+                <p>Средний балл: <span id="stats-avg"></span></p>
+            </div>
+        </main>
+    </div>
+    <script src="js/student.js"></script>
+</body>
+</html>

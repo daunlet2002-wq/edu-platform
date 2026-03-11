@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление учениками</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Управление учениками</h1>
+            <div>
+                <button id="theme-toggle">Сменить тему</button>
+                <a href="admin-dashboard.html">Назад к панели</a>
+            </div>
+        </header>
+        <main>
+            <h2>Создать ученика</h2>
+            <form id="create-student-form">
+                <input type="text" id="student-name" placeholder="Имя" required>
+                <input type="text" id="student-login" placeholder="Логин" required>
+                <input type="password" id="student-password" placeholder="Пароль" required>
+                <button type="submit">Создать</button>
+            </form>
+
+            <h2>Список учеников</h2>
+            <table id="students-table">
+                <thead><tr><th>ID</th><th>Имя</th><th>Логин</th><th>Действия</th></tr></thead>
+                <tbody></tbody>
+            </table>
+        </main>
+    </div>
+    <script src="js/database.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

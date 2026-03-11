@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление уроками</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Управление уроками</h1>
+            <div>
+                <a href="dashboard.html">Назад</a>
+                <button id="logout-button">Выйти</button>
+            </div>
+        </header>
+
+        <form id="create-lesson-form">
+            <h2>Создать новый урок</h2>
+            <input type="text" id="lesson-title" placeholder="Название урока" required>
+            <input type="text" id="lesson-video" placeholder="Имя файла видео (например, lesson1.mp4)" required>
+            <button type="submit">Создать урок</button>
+        </form>
+
+        <form id="add-question-form">
+            <h2>Добавить вопрос к уроку</h2>
+            <select id="lesson-select" required>
+                <option value="">Выберите урок</option>
+            </select>
+            <textarea id="question-text" placeholder="Текст вопроса" required></textarea>
+            <input type="text" id="optionA" placeholder="Вариант A" required>
+            <input type="text" id="optionB" placeholder="Вариант B" required>
+            <input type="text" id="optionC" placeholder="Вариант C" required>
+            <input type="text" id="optionD" placeholder="Вариант D" required>
+            <select id="correctAnswer" required>
+                <option value="A">Правильный ответ: A</option>
+                <option value="B">Правильный ответ: B</option>
+                <option value="C">Правильный ответ: C</option>
+                <option value="D">Правильный ответ: D</option>
+            </select>
+            <button type="submit">Добавить вопрос</button>
+        </form>
+
+        <h2>Список уроков</h2>
+        <div id="lessons-list-admin" class="lessons-grid"></div>
+    </div>
+    <script src="../js/database.js"></script>
+    <script src="../js/admin.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>
